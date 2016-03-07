@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+.tmp
+.sass-cache
+app/bower_components
+.project
+**/*.swp
+npm-debug.log
