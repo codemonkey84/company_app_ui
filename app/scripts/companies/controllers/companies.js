@@ -54,7 +54,7 @@
 		this.create = function(company) {
 			CompaniesService.create(company).success(
 					function(res) {
-						this.listCompanies = res;
+						this.listCompanies.push(res);
 						this.AlertService.add('success', 'Company "'
 								+ company.name + '" created with success!',
 								5000);

@@ -30,7 +30,7 @@
         method: 'get'
       })
       .when('/companies/:id/addOwners', {
-        templateUrl: 'scripts/Companies/views/owners.html',
+        templateUrl: 'scripts/companies/views/owners.html',
         controller: 'CompaniesCtrl',
         controllerAs: 'companiesCtrl',
         method: 'get'
