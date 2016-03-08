@@ -1,9 +1,9 @@
 'use strict';
 
 angular
-		.module('angularContactsListApp')
+		.module('companyApp')
 		.service(
-				'ContactsService',
+				'CompaniesService',
 				function($http) {
 
 					var companyServiceAPI = {};
@@ -11,21 +11,21 @@ angular
 					companyServiceAPI.getListItems = function() {
 						return $http({
 							method : "GET",
-							url : "http://localhost:4567/companies"
+							url : "https://young-ridge-70702.herokuapp.com/companies"
 						});
 					}
 
 					companyServiceAPI.get = function(id) {
 						return $http({
 							method : "GET",
-							url : "http://localhost:4567/companies/" + id
+							url : "https://young-ridge-70702.herokuapp.com/companies/" + id
 						});
 					}
 
 					companyServiceAPI.create = function(company) {
 						return $http({
 							method : "POST",
-							url : "http://localhost:4567/companies",
+							url : "https://young-ridge-70702.herokuapp.com/companies",
 							data : company
 						});
 					}
@@ -33,7 +33,7 @@ angular
 					companyServiceAPI.update = function(company) {
 						return $http({
 							method : "PUT",
-							url : "http://localhost:4567/companies/"+company.id,
+							url : "https://young-ridge-70702.herokuapp.com/companies/"+company.id,
 							data : company
 						});
 					}
@@ -41,7 +41,7 @@ angular
 					companyServiceAPI.addOwners = function(id, owners) {
 						return $http({
 							method : "POST",
-							url : "http://localhost:4567/companies/"+id+"/owners",
+							url : "https://young-ridge-70702.herokuapp.com/companies/"+id+"/owners",
 							data : {beneficiaryOwners: owners}
 						});
 					}

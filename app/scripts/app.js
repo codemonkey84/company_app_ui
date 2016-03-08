@@ -1,42 +1,42 @@
 (function() {
   'use strict';
 
-  angular.module('angularContactsListApp', [
+  angular.module('companyApp', [
     'ngRoute',
     'keepr'
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/contacts', {
-        templateUrl: 'scripts/contacts/views/index.html',
-        controller: 'ContactsCtrl',
-        controllerAs: 'contactsCtrl'
+      .when('/companies', {
+        templateUrl: 'scripts/companies/views/index.html',
+        controller: 'CompaniesCtrl',
+        controllerAs: 'companiesCtrl'
       })
-      .when('/contacts/new', {
-        templateUrl: 'scripts/contacts/views/new.html',
-        controller: 'ContactsCtrl',
-        controllerAs: 'contactsCtrl'
+      .when('/companies/new', {
+        templateUrl: 'scripts/companies/views/new.html',
+        controller: 'CompaniesCtrl',
+        controllerAs: 'companiesCtrl'
       })
-      .when('/contacts/:id/details', {
-        templateUrl: 'scripts/contacts/views/details.html',
-        controller: 'ContactsCtrl',
-        controllerAs: 'contactsCtrl',
+      .when('/companies/:id/details', {
+        templateUrl: 'scripts/companies/views/details.html',
+        controller: 'CompaniesCtrl',
+        controllerAs: 'companiesCtrl',
         method: 'get'
       })
-      .when('/contacts/:id/edit', {
-        templateUrl: 'scripts/contacts/views/edit.html',
-        controller: 'ContactsCtrl',
-        controllerAs: 'contactsCtrl',
+      .when('/companies/:id/edit', {
+        templateUrl: 'scripts/companies/views/edit.html',
+        controller: 'CompaniesCtrl',
+        controllerAs: 'companiesCtrl',
         method: 'get'
       })
-      .when('/contacts/:id/addOwners', {
-        templateUrl: 'scripts/contacts/views/owners.html',
-        controller: 'ContactsCtrl',
-        controllerAs: 'contactsCtrl',
+      .when('/companies/:id/addOwners', {
+        templateUrl: 'scripts/Companies/views/owners.html',
+        controller: 'CompaniesCtrl',
+        controllerAs: 'companiesCtrl',
         method: 'get'
       })
       .otherwise({
-        redirectTo: '/contacts'
+        redirectTo: '/companies'
       });
   });
 

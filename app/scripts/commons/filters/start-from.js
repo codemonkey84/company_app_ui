@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularContactsListApp')
+angular.module('companyApp')
   .filter('startFrom', function () {
     return function(input, start) {
       start = +start; //parse to int

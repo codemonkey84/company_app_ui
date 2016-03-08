@@ -1,6 +1,6 @@
 {
-  "name": "angularContactListApp",
-  "version": "0.0.0",
+  "name": "companyApp",
+  "version": "0.0.1",
   "dependencies": {
     "angular": "1.2.6",
     "json3": "~3.2.6",

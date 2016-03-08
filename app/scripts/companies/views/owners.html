@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-lg-6 col-lg-offset-3 col-xs-10 col-xs-offset-1 main-content">
     <h1 class="text-center">Company List</h1>    
-    <form autocomplete="off" role="form" novalidate class="form-inline contact-actions clearfix" name="crudOperations" data-ng-submit="contactsCtrl.addOwners(contactsCtrl.company, contactsCtrl.ownerToAdd)" >
+    <form autocomplete="off" role="form" novalidate class="form-inline contact-actions clearfix" name="crudOperations" data-ng-submit="companiesCtrl.addOwners(companiesCtrl.company, companiesCtrl.ownerToAdd)" >
       <fieldset>
         <legend>Add owner</legend>
-        <input type="hidden" data-ng-model="contactsCtrl.company.id" />
+        <input type="hidden" data-ng-model="companiesCtrl.company.id" />
         <div class="form-group float-label-control col-lg-6 col-md-6 col-sm-6 no-padding-left" data-ng-class="{'has-error': crudOperations.name.$invalid && crudOperations.name.$dirty, 'has-success': crudOperations.name.$valid && crudOperations.name.$dirty}">
-          <input type="text" name="name" data-ng-model="contactsCtrl.ownerToAdd.name" class="form-control" data-ng-class="{empty: contactsCtrl.ownerToAdd.name.length === 0 || contactsCtrl.ownerToAdd.name.length === undefined}" placeholder="Name" required qs-focus/>
+          <input type="text" name="name" data-ng-model="companiesCtrl.ownerToAdd.name" class="form-control" data-ng-class="{empty: companiesCtrl.ownerToAdd.name.length === 0 || companiesCtrl.ownerToAdd.name.length === undefined}" placeholder="Name" required qs-focus/>
           <div data-ng-if="crudOperations.name.$invalid && crudOperations.name.$dirty && !crudOperations.name.$focused">
             <p class="help-block">
               This field is required
@@ -19,7 +19,7 @@
             <p>You only can finish the operation if all fields required was populated correctly</p>
           </div>
           <input type="submit" class="btn btn-primary btn-outline col-lg-12 col-md-12 col-sm-12  clearfix" value="CREATE" data-ng-disabled="crudOperations.$invalid && !crudOperations.data.$dirty" />
-          <a class="btn btn-danger btn-outline col-lg-12 col-md-12 col-sm-12 " href="#/contacts/{{contactsCtrl.company.id}}/details" >CANCEL</a>
+          <a class="btn btn-danger btn-outline col-lg-12 col-md-12 col-sm-12 " href="#/companies/{{companiesCtrl.company.id}}/details" >CANCEL</a>
         </div>
       </fieldset>
     </form>

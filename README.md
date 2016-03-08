@@ -7,7 +7,7 @@ UI for Company API services
 1 - Clone this repository and access the generated folder
 
 ```bash
-$ git clone git@github.com:willmendesneto/angular-contact-list.git [project-name]
+$ git clone git@github.com:codemonkey84/company_app_ui.git [project-name]
 $ cd [project-name]
 ```
 
@@ -59,9 +59,6 @@ $ grunt serve:dist
 ## 3rd party dependencies ##
 
 This project use (actually globally): 
-
-###Ruby
-- ```sass``` and ```compass``` for stylesheets;
 
 ###NodeJS
 - ```karma``` like test runner;

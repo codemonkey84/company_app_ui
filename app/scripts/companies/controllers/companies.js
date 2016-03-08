@@ -2,8 +2,8 @@
 (function() {
 	'use strict';
 
-	function ContactsCtrl($scope, $rootScope, $location, $routeParams, $route,
-			$filter, AlertService, ContactsService) {
+	function CompaniesCtrl($scope, $rootScope, $location, $routeParams, $route,
+			$filter, AlertService, CompaniesService) {
 
 		this.AlertService = AlertService;
 
@@ -49,10 +49,10 @@
 		};
 
 		/**
-		 * Add a listContacts in this.listContacts
+		 * Add a company
 		 */
 		this.create = function(company) {
-			ContactsService.create(company).success(
+			CompaniesService.create(company).success(
 					function(res) {
 						this.listCompanies = res;
 						this.AlertService.add('success', 'Company "'
@@ -68,7 +68,7 @@
 		 */
 		this.addOwners = function(company, owner) {
 			company.beneficiaryOwners.push(owner);
-			ContactsService.addOwners(company.id, [ owner ]).success(
+			CompaniesService.addOwners(company.id, [ owner ]).success(
 					function(res) {
 						this.AlertService.add('success', owner.name
 								+ ' is now owner of ' + company.name, 5000);
@@ -76,7 +76,7 @@
 				this.AlertService.add('error', 'Error: ' + err, 5000);
 			}.bind(this));
 			this.reset();
-			$location.path('/contacts');
+			$location.path('/companies');
 		};
 
 		/**
@@ -86,7 +86,7 @@
 		 */
 		this.get = function() {
 			var id = $routeParams.id;
-			ContactsService.get(id).success(function(res) {
+			CompaniesService.get(id).success(function(res) {
 				this.company = res;
 			}.bind(this)).error(
 					function(err, status) {
@@ -104,7 +104,7 @@
 		 * @return {[type]} [description]
 		 */
 		this.update = function(company) {
-			ContactsService.update(company).success(
+			CompaniesService.update(company).success(
 					function(res) {
 						this.AlertService.add('success',
 								'Compnay updated with success!', 5000);
@@ -130,7 +130,7 @@
 				this.create(company);
 			}
 			this.reset();
-			$location.path('/contacts');
+			$location.path('/companies');
 		};
 
 		/**
@@ -139,7 +139,7 @@
 		 * @return {[type]} [description]
 		 */
 		this.init = function() {
-			ContactsService.getListItems().success(function(res) {
+			CompaniesService.getListItems().success(function(res) {
 				if (res && res.length > 0) {
 					$scope.isFound = true;
 					this.listCompanies = this.filteredData = res;
@@ -160,11 +160,11 @@
 
 	}
 
-	angular.module('angularContactsListApp').controller('ContactsCtrl',
-			ContactsCtrl);
+	angular.module('companyApp').controller('CompaniesCtrl',
+			CompaniesCtrl);
 
-	ContactsCtrl.$inject = [ '$scope', '$rootScope', '$location',
+	CompaniesCtrl.$inject = [ '$scope', '$rootScope', '$location',
 			'$routeParams', '$route', '$filter', 'AlertService',
-			'ContactsService' ];
+			'CompaniesService' ];
 
 }());

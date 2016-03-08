@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularContactsListApp')
+angular.module('companyApp')
   .directive('qsFocus', function () {
     return {
       restrict: 'A',
