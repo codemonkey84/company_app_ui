@@ -2,6 +2,9 @@ Company APP UI
 ==============
 UI for Company API services
 
+### Deployed on Heroku
+https://enigmatic-depths-27834.herokuapp.com
+
 ### How to Use
 
 1 - Clone this repository and access the generated folder
