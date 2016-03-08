@@ -1,7 +1,10 @@
 {
-  "name": "angularContactListApp",
-  "version": "0.0.0",
-  "dependencies": {},
+  "name": "companyApp",
+  "version": "0.0.1",
+  "dependencies": {
+	  "bower": "*",
+	  "webdriver-manager": "*"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.4.0",
